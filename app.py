@@ -43,7 +43,7 @@ else:
 
 ##connecting mongodb
 app.logger.info("Connecting to mongodb")
-client = pymongo.MongoClient("mongodb_link+")
+client = pymongo.MongoClient("mongodb_link")
 db = client['youtube_scraped_data']
 my_coll=db['names_and_comments']
 my_coll.delete_many({})
