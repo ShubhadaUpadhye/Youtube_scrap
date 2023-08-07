@@ -25,7 +25,7 @@ youtube = build('youtube', 'v3', developerKey=api_key)
 
 ##connecting ,ysql workbench
 print("connecting to mysql workbench")
-mydb =mysql.connector.connect(host='localhost', user='root', passwd='mysqlp@$$', database='youtube_details')
+mydb =mysql.connector.connect(host='localhost', user='root', passwd='********', database='youtube_details')
 mycursor = mydb.cursor(buffered=True)
 app.logger.info(mydb.is_connected())
 try:
@@ -43,7 +43,7 @@ else:
 
 ##connecting mongodb
 app.logger.info("Connecting to mongodb")
-client = pymongo.MongoClient("mongodb+srv://shubhadadu:datascience@shuhadaupadhye.l98sn.mongodb.net/?retryWrites=true&w=majority")
+client = pymongo.MongoClient("mongodb_link+")
 db = client['youtube_scraped_data']
 my_coll=db['names_and_comments']
 my_coll.delete_many({})
